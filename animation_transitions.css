@@ -1,0 +1,48 @@
+body {
+    background: #333;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative; /* position relative to itself; able to position anywhere on the document */
+    /* absolute is relative to parent*/
+    background-color: white;
+    /* below is positioning on the document */
+    /* top: 50px;
+    left: 150px;
+    bottom: 50px; */
+
+    animation-name: move-around;
+    animation-duration: 5s;
+    animation-iteration-count: 5; 
+    animation-fill-mode: forwards; /*maintains last keyframe */
+    animation-timing-function: ease-in-out; /* pacing of the animation i.e. beginning is fast, end is slow */
+}
+
+/* @keyframes {label of animation} */
+@keyframes move-around {
+    0%{background-color: white; top: 0px; left: 0px; border-radius: 0;} /*first step, border-radius is rounding of box*/
+    25%{background-color: red; top: 0px; left: 200px; border-radius: 50% 0 0 0}
+    50%{background-color: blue; top: 200px; left: 200px; border-radius: 50% 50% 0 0}
+    75%{background-color: green; top: 200px; left: 0px; border-radius: 50% 50% 50% 0} 
+    100%{background-color: white; top: 0px; left: 0px; border-radius: 50%}
+}
+
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    top: 200px;
+    background-color: white;
+    transition: background, border-radius;
+    transition-duration: 1s, 5s; /* how long the transition takes; 1s background 5s border-radius*/
+    transition-delay: 1s, 2s; /* background takes 1s to start, 2s for border-radius */
+}
+
+.box2:hover {
+    background: blue;
+    border-radius: 50%;
+}

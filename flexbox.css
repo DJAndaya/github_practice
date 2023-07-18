@@ -1,0 +1,52 @@
+li {
+    list-style: none;
+    margin: 0 10px;
+    /* border: 1px solid black */
+}
+
+ul {
+    display: flex; /* putting them in a row instead of column*/
+    align-items: center;
+}
+
+nav {
+    padding: 10px;
+    background: lightgray;
+}
+
+ul li:first-child {
+    margin: right;
+}
+
+img{
+    width:50px;
+    transition: transform;
+    transition-duration: 1s;
+    cursor: pointer; /* changes clicker to a hand when hovering */
+}
+
+img:hover{
+    transform: rotate(720deg)
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 15px;
+}
+
+p{
+    font-size: 10px;
+}
+
+section{
+    padding: 10px;
+}
+
+.section-second {
+    flex-grow: 4;
+}
